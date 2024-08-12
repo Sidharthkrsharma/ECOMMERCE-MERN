@@ -1,0 +1,125 @@
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+
+
+    nav {
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 4;
+
+
+        .navlogo img {
+            width: 200px;
+        }
+
+        .left {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+
+            .nav_btn a {
+                color: black;
+                font-weight: 500;
+                text-decoration: none;
+                margin-right: 2px;
+                border-radius: 2px;
+                padding: 8px;
+            }
+
+            .hamburgur {
+                display: none;
+            }
+
+            .profile {
+                .profile_img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width :800px) {
+    nav {
+        overflow: hidden;
+        padding-top: 20px;
+
+        .right .nav_btn,
+        .right .profile,
+        .right .cartsicon {
+            display: none;
+        }
+
+        .right .hamburgur {
+            cursor: pointer;
+            font-size: 25px;
+            padding-top: 4px;
+            display: block !important;
+        }
+
+        .right .cart_btn {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width:568px) {
+    nav {
+        padding: 10px;
+    }
+
+    .navlogo img {
+        width: 95px;
+        margin-top: 14px;
+    }
+
+}
+
+// cart style
+
+#ex4 .p1[data-count]::after {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    content: attr(data-count);
+    font-size: 40%;
+    padding: .2em;
+    border-radius: 50%;
+    line-height: 1em;
+    color: white;
+    background-color: red;
+    text-align: center;
+    min-width: 21px;
+}
+
+#ex4 .fa-stack {
+    width: 1.5em;
+}
+
+.dropdown_btn {
+    background: none !important;
+    border: none !important;
+    color: blue;
+    font-size: 20px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
